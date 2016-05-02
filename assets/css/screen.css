@@ -668,10 +668,11 @@ img {
   display: inline-block;
   margin: 0;
   width: 100%;
+  text-align: center;
   height: auto;
 }
 .container .post .img-post img {
-  width: 100%;
+  max-width: 100%;
 }
 .container .post .post-excerpt p {
   font-size: 1.1rem;
@@ -714,6 +715,9 @@ img {
 .container .post .content-post {
   border-bottom: double 7px #49adad;
   padding-bottom: 3rem;
+}
+.container .post .content-post img {
+  max-width: 100%;
 }
 .container .post .content-post p {
   font-size: 1.1rem;
