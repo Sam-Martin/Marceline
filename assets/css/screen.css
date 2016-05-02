@@ -539,7 +539,7 @@ img {
    3. General
    ========================================================================== */
 .masthead {
-  background: rgba(130,207,208,0.6) url("../img/header.jpg") repeat-y;
+  background: rgba(130,207,208,0.6) url("../img/header.jpg") repeat;
   width: 30%;
   max-height: 100%;
   text-align: center;
@@ -554,21 +554,35 @@ img {
   display: inline-block;
   height: 3px;
   width: 30%;
-  background: #000;
+  background: none;
 }
 .masthead .header-wrapper .logo {
   margin: 0;
   display: inline-block;
-  width: 15.6rem;
   height: auto;
 }
+
 .masthead .header-wrapper .logo a img {
-  width: 100%;
-  height: 100%;
+  width: 250px;
+  height: 250px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+
 }
 .masthead .header-wrapper .logo + .title {
   position: initial;
 }
+
+.masthead .title,
+.masthead .menu {
+  background: rgb(255, 255, 255); /* Fall-back for browsers that don't
+                                    support rgba */
+  background: rgba(255, 255, 255, .5);
+}
+
 .masthead .header-wrapper .title a {
   position: relative;
   top: 50%;
@@ -659,7 +673,6 @@ img {
 }
 .container .post .img-post img {
   width: 100%;
-  height: 100%;
 }
 .container .post .post-excerpt p {
   font-size: 1.1rem;
@@ -707,6 +720,9 @@ img {
   font-size: 1.1rem;
   line-height: 1.65;
 }
+.footer-post{
+  overflow: auto;
+}
 .container .post .footer-post {
   margin: 3rem 0;
   position: relative;
@@ -751,11 +767,21 @@ img {
   margin: 0 0 8px 0;
   font-size: 0.9rem;
 }
+.navigate-post{
+  float:left;
+  width:80%
+}
+.prev-post, .next-post{
+    float: left;
+    width: 50%;
+}
+.prev-post h4, .next-post h4{
+  margin: 0 0 12px 0;
+}
 .container .post .footer-post .share {
   display: inline-block;
   float: right;
   text-align: center;
-  margin-top: 30px;
 }
 .container .post .footer-post .share h4 {
   text-transform: uppercase;

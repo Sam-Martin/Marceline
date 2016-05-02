@@ -14,6 +14,7 @@ $(window).scroll(function() {
 });
 
 $(function() {
+  /*
 	var backgroundheight = 8000;
 	var now = new Date();
 	var hour = now.getHours();
@@ -34,6 +35,5 @@ $(function() {
 			}, 50
 		);
    	}
-	scrollbackground();
+	scrollbackground(); */
 });
-

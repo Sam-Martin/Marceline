@@ -16,16 +16,16 @@
 	    </div>
 	    <div class="bottom">
 			<ul class="menu">
-				<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-				<li><a href="#"><i class="fa fa-github"></i></a></li>
-				<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+				<li><a href="https://twitter.com/samjackmartin"><i class="fa fa-twitter"></i></a></li>
+				<li><a href="https://github.com/Sam-Martin"><i class="fa fa-github"></i></a></li>
+
 			</ul>
 	    </div>
   	</div>
 </header>
 
 <section class="container">
-  
+
 	<article class="{{post_class}} single">
         <header class="header-post">
         	<span class="meta-post">
@@ -40,28 +40,23 @@
 
 		<footer class="footer-post">
 
-			{{#author}}
-			<section class="author-post">
-				{{#if image}}
-					<figure class="avatar">
-						<img src="{{image}}" alt="{{name}}">
-					</figure>
-				{{/if}}
-
-				<div class="bio">
-					<span>Autor</span>
-					<h4 class="author-name">
-						<a href="{{url}}">{{name}}</a>
-					</h4>
-					{{#if bio}}
-						<p>{{{bio}}}</p>
-					{{/if}}
-				</div>
-			</section>
-			{{/author}}
+      <section class="navigate-post">
+        <div class="prev-post">
+          {{#prev_post}}
+            <h4>Previous Post</h4>
+            <a href="{{url}}">{{title}}</a>
+          {{/prev_post}}
+        </div>
+        <div class="next-post">
+          {{#next_post}}
+            <h4>Next Post</h4>
+            <a href="{{url}}">{{title}}</a>
+          {{/next_post}}
+        </div>
+      </section>
 
 			<section class="share">
-				<h4>Comparte</h4>
+				<h4>Share</h4>
 				<a href="https://twitter.com/share?text={{title}}&url={{url absolute="true"}}" class="fa fa-twitter" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
 					<span class="hidden">Twitter</span>
 				</a>
@@ -76,11 +71,28 @@
 			</section>
 		</footer>
 
+
+
+      {{/post}}
+
 		<section class="comments-post">
 			<!-- Disqus Comments -->
-			
+      <div id="disqus_thread"></div>
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+          var disqus_shortname = 'sam-martin'; // required: replace example with your forum shortname
+          var disqus_identifier = '{{post.id}}';
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 		</section>
 
-		{{/post}}
   	</article>
 </section>
