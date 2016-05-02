@@ -391,14 +391,13 @@ table.plain tbody > tr:nth-child(odd) > th {
   background: transparent;
 }
 img {
-  width: 100%;
   height: auto;
 }
 .hidden {
   display: none;
 }
 /* ==================================================================================================================
-   2. Code Highlighter (Monokai Sublime style) | Derived from Monokai by noformnocontent http://nn.mit-license.org/
+   2. Code Highlighter (Monokai Sublime style) | Derived from Monokai by noformnocontent //nn.mit-license.org/
    ================================================================================================================== */
 .hljs {
   display: block;
