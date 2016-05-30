@@ -309,6 +309,8 @@ tt {
   white-space: pre-wrap;
   border: 1px solid #eee;
   background: #f4f4f4;
+}
+tt{
   vertical-align: top;
 }
 pre code {
